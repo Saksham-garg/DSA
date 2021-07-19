@@ -1,3 +1,10 @@
+// Time Complexity of Linear Search is O(n), as in the Worst case we have to searh whole array
+// Space complexity of Linear Search is O(1)
+
+// Linear Search can be of two types:
+//   1. Unordered Linear Search
+//   2. Ordered Linear Search
+
 #include<stdio.h>
 #include<stdlib.h>
 int n,arr[]={};
@@ -32,4 +39,21 @@ void Linear_Search(int key){
     if(flag){
         printf("Key not found!!");
     }
+}
+
+// Function for Ordered Linear Search
+// Here also time complexity is O(n) but in average case it reduces 
+// the complexity even though the growth rate is same
+int O_linear_Srh(int key){
+    for(int i=0;i<n;i++){
+        if(arr[i]==key){
+            printf("Key found at index %d",i);
+            return 1;
+        }
+        else if(arr[i]>key){
+            printf("Key not found!!");
+            return;
+        }
+    }
+    return -1;
 }
