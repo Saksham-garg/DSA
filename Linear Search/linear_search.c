@@ -7,27 +7,28 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-int n,arr[]={};
-void set_array();
-void Linear_Search(int);
-
+int n;
+void set_array(int *);
+void Linear_Search(int,int *);
+int O_linear_Srh(int,int *);
 int main(){
     printf("Size of array: ");
     scanf("%d",&n);
-    int arr[n],key;
-    set_array();
+    int key,*arr;
+    arr=(int *)malloc(sizeof(int)*n);
+    set_array(arr);
     printf("\nEnter the number you want to search : ");
     scanf("%d",&key);
-    Linear_Search(key);
+    Linear_Search(key,arr);
 }
-void set_array(){  
+void set_array(int *arr){  
     for(int i=0;i<n;i++){
         printf("\nEnter the %d number: ",i+1);
         scanf("%d",&*(arr+i));
     }
 }
 
-void Linear_Search(int key){
+void Linear_Search(int key,int *arr){
     int flag=1;
     for(int i=0;i<n;i++){
         if(arr[i]==key){
@@ -44,7 +45,7 @@ void Linear_Search(int key){
 // Function for Ordered Linear Search
 // Here also time complexity is O(n) but in average case it reduces 
 // the complexity even though the growth rate is same
-int O_linear_Srh(int key){
+int O_linear_Srh(int key,int *arr){
     for(int i=0;i<n;i++){
         if(arr[i]==key){
             printf("Key found at index %d",i);
@@ -52,7 +53,7 @@ int O_linear_Srh(int key){
         }
         else if(arr[i]>key){
             printf("Key not found!!");
-            return;
+            return -1;
         }
     }
     return -1;
