@@ -63,7 +63,7 @@ int main(void){
     int queue[n];
     int choice;
     do{
-        printf("\n*******************Make Operations on Stack********************** ");
+        printf("\n*******************Make Operations on Circular Queue********************** ");
         printf("\nEnter your choice\n 1.Push\n2.pop\n3.Display\n4.Length\n");
         scanf("%d",&choice);
         switch(choice){

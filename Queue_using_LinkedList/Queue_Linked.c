@@ -67,7 +67,7 @@ int main(void){
     int queue[n];
     int choice;
     do{
-        printf("\n*******************Make Operations on Queue********************** ");
+        printf("\n*******************Make Operations on Queue using LinkedList********************** ");
         printf("\nEnter your choice\n 1.Push\n2.pop\n3.Display\n4.Length\n");
         scanf("%d",&choice);
         switch(choice){
