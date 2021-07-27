@@ -55,7 +55,7 @@ int main(void){
             default:
                 printf("Invalid Choice!!");
         }
-        printf("\nDo you want to Exit??\n 1---YES \n 0---NO");
+        printf("\nDo you want to continue??\n 1---YES \n 0---NO");
         scanf("%d",&choice);
     }while(choice);
 }

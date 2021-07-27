@@ -70,7 +70,7 @@ void Display(){
 int main(void){
     int choice;
     do{
-        printf("\n*******************Make Operations on Stack********************** ");
+        printf("\n*******************Make Operations on Stack using linkedList********************** ");
         printf("\nEnter your choice\n 1.Push\n2.pop\n3.Display\n4.Length\n");
         scanf("%d",&choice);
         switch(choice){
@@ -85,7 +85,7 @@ int main(void){
             default:
                 printf("Invalid Choice!!");
         }
-        printf("\nDo you want to Exit??\n 1---YES \n 0---NO");
+        printf("\nDo you want to Continue??\n 1---YES \n 0---NO");
         scanf("%d",&choice);
     }while(choice);
 }
